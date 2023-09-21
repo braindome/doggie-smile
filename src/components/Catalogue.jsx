@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DogPreview from "./DogPreview";
+import "./Catalogue.css";
 
 const dogApiUrl = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
 
@@ -24,12 +25,14 @@ const Catalogue = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="catalogue-container">
       <h1>Catalogue</h1>
+      <div className="dog-grid">
+        {dogList.map((dog, index) => (
+          <DogPreview key={index} img={dog.img} name={dog.name} />
+        ))}
+      </div>
       <button onClick={props.nextScreen}>Home</button>
-      {dogList.map((dog, index) => (
-        <DogPreview key={index} img={dog.img} name={dog.name} />
-      ))}
     </div>
   );
 };
