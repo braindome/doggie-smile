@@ -11,19 +11,19 @@ function App() {
   let content = null;
 
   const handleNextScreen = () => {
-    setCurrentScreen(CATALOGUE)
-  }
+    setCurrentScreen(CATALOGUE);
+  };
 
   const handleHomeScreen = () => {
-    setCurrentScreen(WELCOME)
-  }
+    setCurrentScreen(WELCOME);
+  };
 
   switch (currentScreen) {
     case WELCOME:
       content = <Welcome nextScreen={handleNextScreen} />;
       break;
     case CATALOGUE:
-      content = <Catalogue nextScreen={handleHomeScreen}/>;
+      content = <Catalogue nextScreen={handleHomeScreen} />;
       break;
     default:
       content = <Welcome nextScreen={handleNextScreen} />;
