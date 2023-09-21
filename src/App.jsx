@@ -4,28 +4,29 @@ import Catalogue from "./components/Catalogue";
 import "./App.css";
 
 function App() {
-  const WELCOME = "welcome",
-    CATALOGUE = "catalogue";
+  const WELCOME = "welcome";
+  const CATALOGUE = "catalogue";
   const [currentScreen, setCurrentScreen] = useState(WELCOME);
 
   let content = null;
 
-  //setCurrentScreen(WELCOME);
+  const handleNextScreen = () => {
+    setCurrentScreen(CATALOGUE)
+  }
 
-  // useEffect(() => {
-  //   console.log("set current screen...");
-  //   setCurrentScreen(WELCOME);
-  // }, []);
+  const handleHomeScreen = () => {
+    setCurrentScreen(WELCOME)
+  }
 
   switch (currentScreen) {
     case WELCOME:
-      content = <Welcome nextScreen={setCurrentScreen(CATALOGUE)} />;
+      content = <Welcome nextScreen={handleNextScreen} />;
       break;
-    // case CATALOGUE:
-    //   content = <Catalogue />;
-    //   break;
+    case CATALOGUE:
+      content = <Catalogue nextScreen={handleHomeScreen}/>;
+      break;
     default:
-      content = <Welcome />;
+      content = <Welcome nextScreen={handleNextScreen} />;
       break;
   }
 
