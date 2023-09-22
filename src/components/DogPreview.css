@@ -26,6 +26,7 @@
     }
   }
   .dog-preview {
+    cursor: pointer;
     border-radius: 10px;
     padding: 15px;
     display: inline-block;
@@ -39,6 +40,7 @@
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
   }
+
   .dog-preview:hover, .dog-preview:focus, .dog-preview:active {
     -webkit-animation-name: hvr-back-pulse;
     animation-name: hvr-back-pulse;
