@@ -46,12 +46,18 @@ const Catalogue = (props) => {
             key={index}
             img={dog.img}
             name={dog.name}
+            sex={dog.sex}
+            breed={dog.breed}
+            present={dog.present}
+            age={dog.age}
             onClick={() => handleDogPreviewClick(dog)}
           />
         ))}
+
+      
       </div>
 
-      {dogCardVisible && (
+      {/* {dogCardVisible && (
         <DogCard
           name={selectedDog.name}
           sex={selectedDog.sex}
@@ -61,8 +67,10 @@ const Catalogue = (props) => {
           age={selectedDog.age}
           onClose={closeDogCard}
         />
-      )}
-      
+      )} */}
+
+
+
       <button onClick={props.nextScreen}>Home</button>
 
     </div>

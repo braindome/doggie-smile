@@ -8,12 +8,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .dog-card {
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.dog-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     max-width: 80%;
-  }
+}
