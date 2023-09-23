@@ -3,7 +3,7 @@ import "./DogPreview.css"
 
 const DogPreview = (props) => {
   return (
-    <div className="dog-preview">
+    <div className="dog-preview" onClick={props.onClick}>
       <img src={props.img} alt="" className="dog-img" />
       <h3>{props.name} </h3>
     </div>
