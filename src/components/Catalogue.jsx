@@ -50,6 +50,7 @@ const Catalogue = (props) => {
             breed={dog.breed}
             present={dog.present}
             age={dog.age}
+            owner={dog.owner}
             onClick={() => handleDogPreviewClick(dog)}
           />
         ))}

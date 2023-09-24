@@ -1,6 +1,5 @@
 const DogCard = (props) => {
   return (
-
     <div className="overlay">
       <div className="dog-card" onClick={props.onClose}>
         <section>
@@ -12,9 +11,7 @@ const DogCard = (props) => {
           <h3>{props.age} </h3>
         </section>
       </div>
-
     </div>
-
   );
 };
 

@@ -20,12 +20,15 @@
       background-color: rgba(32, 152, 209, 0.75);
     }
   }
-  @keyframes dog-preview{
+@keyframes dog-preview{
     50% {
       background-color: rgba(32, 152, 209, 0.75);
     }
-  }
-  .dog-preview {
+}
+
+.dog-preview {
+    display: flex;
+    padding: 1rem;
     cursor: pointer;
     border-radius: 10px;
     padding: 15px;
@@ -39,9 +42,23 @@
     transition-duration: 0.5s;
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
-  }
+}
 
-  .dog-preview:hover, .dog-preview:focus, .dog-preview:active {
+@media (min-width: 40rem) {
+  .dog-preview {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .dog-preview {
+    width: 33.3333%;
+  }
+}
+
+
+
+.dog-preview:hover, .dog-preview:focus, .dog-preview:active {
     -webkit-animation-name: hvr-back-pulse;
     animation-name: hvr-back-pulse;
     -webkit-animation-duration: 1s;
@@ -55,4 +72,4 @@
     background-color: #2098D1;
     background-color: #2098d1;
     color: white;
-  }
+}

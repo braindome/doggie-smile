@@ -17,11 +17,14 @@ const DogPreview = (props) => {
       </span>
       { expanded ? (
         <section>
+          <img src={props.img} alt="" />
           <h3>Sex: {props.sex}</h3>
           <h3>Breed: {props.breed}</h3>
-          <img src={props.img} alt="" />
-          <h3>is present? {props.present} </h3>
-          <h3>Age: {props.age} </h3>
+
+          <h3>Is present? {props.present.toString()} </h3>
+          <h3>Owner: {props.owner.name} {props.owner.lastName}</h3>
+          <h3>Phone: {props.owner.phoneNumber} </h3>
+
         </section>
 
       ) : null}
