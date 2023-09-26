@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import DogPreview from "./DogPreview";
-import DogCard from "./DogCard";
 import "./Catalogue.css";
 import { Link } from "react-router-dom";
 
@@ -8,12 +7,6 @@ const dogApiUrl = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
 
 const Catalogue = (props) => {
   const [dogList, setDogList] = useState([]);
-  const [selectedDog, setSelectedDog] = useState(null);
-  const [dogCardVisible, setDogCardVisible] = useState(false);
-
-  // useEffect(() => {
-  //   getDogList();
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,9 +27,6 @@ const Catalogue = (props) => {
     setDogCardVisible(true);
   };
 
-  const closeDogCard = () => {
-    setDogCardVisible(false);
-  };
 
   return (
     <div className="catalogue-container">
@@ -58,25 +48,7 @@ const Catalogue = (props) => {
             onClick={() => handleDogPreviewClick(dog)}
           />
         ))}
-
-      
       </div>
-
-      {/* {dogCardVisible && (
-        <DogCard
-          name={selectedDog.name}
-          sex={selectedDog.sex}
-          breed={selectedDog.breed}
-          img={selectedDog.img}
-          present={selectedDog.present}
-          age={selectedDog.age}
-          onClose={closeDogCard}
-        />
-      )} */}
-
-
-
-      {/* <button onClick={props.nextScreen}>Home</button> */}
 
     </div>
   );

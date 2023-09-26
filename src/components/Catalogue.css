@@ -11,16 +11,17 @@ html {
 
   
 body {
-    font-family: 'Quicksand', serif;
+    font-family: 'Iosevka', serif;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0;
     padding: 1rem;
-    max-width: 1200px;
+    /* max-width: 800px; */
     margin: 0 auto;
 }
 
 img {
+    border-radius: 10px;
     height: auto;
     max-width: 100%;
     vertical-align: middle;
