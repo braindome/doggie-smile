@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DogPreview from "./DogPreview";
 import DogCard from "./DogCard";
 import "./Catalogue.css";
+import { Link } from "react-router-dom";
 
 const dogApiUrl = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
 
@@ -40,6 +41,9 @@ const Catalogue = (props) => {
   return (
     <div className="catalogue-container">
       <h1>Catalogue</h1>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
       <div className="dog-grid">
         {dogList.map((dog, index) => (
           <DogPreview
@@ -72,7 +76,7 @@ const Catalogue = (props) => {
 
 
 
-      <button onClick={props.nextScreen}>Home</button>
+      {/* <button onClick={props.nextScreen}>Home</button> */}
 
     </div>
   );
