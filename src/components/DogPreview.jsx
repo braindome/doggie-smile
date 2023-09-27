@@ -13,6 +13,17 @@ const DogPreview = (props) => {
     setImgSrc('./public/placeholder.svg');
   }
 
+  const setIsPresentSymbols = () => {
+
+    return props.present ? (
+      <span style={{ color: "green" }}>●</span>
+    ) : (
+      <span style={{ color: "red" }}>●</span>
+    )
+
+
+  }
+
   return (
     <div className="dog-preview" onClick={props.onClick}>
       <img src={imgSrc} onError={handleImageError}  alt="" className="dog-img" />
@@ -26,7 +37,7 @@ const DogPreview = (props) => {
           <section className="data">
             <h3>Sex: {props.sex}</h3>
             <h3>Breed: {props.breed}</h3>
-            <h3>Is present? {props.present.toString()} </h3>
+            <h3>Status: {setIsPresentSymbols()} </h3>
             <h3>Owner: {props.owner.name} {props.owner.lastName}</h3>
             <h3>Phone: {props.owner.phoneNumber} </h3>
           </section>
