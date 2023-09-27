@@ -1,16 +1,6 @@
-/* .dog-preview {
-    text-align: center;
-    border: solid grey 2px;
-    border-radius: 20px;
-}
-
-.dog-preview:hover {
-    background-color: green;
-} */
-
 .dog-img {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -25,17 +15,36 @@
       background-color: rgba(32, 152, 209, 0.75);
     }
 }
+.dog-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dog-card img {
+  object-fit: contain;
+}
+
+.dog-card:hover, .dog-card:active {
+  border: 1px solid #2098D1;
+}
 
 .data {
   background-color: gray;
-  display: grid;
-  grid-template-columns: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.data h3 {
+  color: black;
+  flex: 1 1 50%;
+  margin: 0;
 }
 
 .dog-preview {
     display: flex;
     padding: 1rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 15px;
     display: inline-block;
     vertical-align: middle;

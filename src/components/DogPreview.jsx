@@ -21,8 +21,8 @@ const DogPreview = (props) => {
         <b>{btnName}</b>
       </span>
       { expanded ? (
-        <section className="card">
-          <img src={imgSrc} onError={handleImageError} alt="" />
+        <section className="dog-card">
+          <img src={imgSrc} onError={handleImageError} alt="" className="big-img" />
           <section className="data">
             <h3>Sex: {props.sex}</h3>
             <h3>Breed: {props.breed}</h3>
@@ -30,9 +30,6 @@ const DogPreview = (props) => {
             <h3>Owner: {props.owner.name} {props.owner.lastName}</h3>
             <h3>Phone: {props.owner.phoneNumber} </h3>
           </section>
-
-
-
         </section>
 
       ) : null}
