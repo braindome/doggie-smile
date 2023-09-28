@@ -27,6 +27,20 @@ img {
     vertical-align: middle;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 1em;
+    height: 100px;
+}
+
+.header input, button {
+    height: 3em;
+}
+
 .catalogue-container {
     padding: 20px;
 }
@@ -37,6 +51,6 @@ img {
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 0;
-
+    justify-content: center;
 }
   
