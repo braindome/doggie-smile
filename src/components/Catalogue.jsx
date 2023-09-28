@@ -8,6 +8,7 @@ const dogApiUrl = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
 
 const Catalogue = (props) => {
   const [dogList, setDogList] = useState([]);
+  const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,17 @@ const Catalogue = (props) => {
     fetchData();
   }, []);
 
+  const handleSearch = async () => {
+    try {
+      const filteredDogs = dogList.filter((dog) =>
+        dog.name.toLowerCase().includes(searchInput.toLowerCase())
+      );
+      setDogList(filteredDogs);
+    } catch (error) {
+      console.error('Error searching dogs:', error);
+    }
+  };
+
   const handleDogPreviewClick = (dog) => {
     console.log("Clicking on preview", dog);
     setSelectedDog(dog);
@@ -33,7 +45,11 @@ const Catalogue = (props) => {
   return (
     <div className="catalogue-container">
       <h1>Catalogue</h1>
-      {/* <Header /> */}
+      {/* <Header 
+        searchInput={searchInput}
+        onSearchInputChange={setSearchInput}
+        onSearch={handleSearch}
+      /> */}
       <Link to="/">
         <button>Home</button>
       </Link>
