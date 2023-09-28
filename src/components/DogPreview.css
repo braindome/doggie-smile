@@ -18,6 +18,8 @@
 .dog-card {
   border-radius: 20px;
   overflow: hidden;
+  border: 1px solid black;
+
 }
 
 .dog-card img {
@@ -58,13 +60,13 @@
     transition-property: color, background-color; */
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 576px) {
   .dog-preview {
     width: 50%;
   }
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 992px) {
   .dog-preview {
     width: 33.3333%;
   }
@@ -100,6 +102,5 @@
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     background-color: #2098D1;
-    background-color: #2098d1;
     color: white;
 }
