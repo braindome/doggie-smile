@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./DogPreview.css";
 import "./DogCard";
+import placeholder from "../assets/placeholder.svg" 
 import DogCard from "./DogCard";
 
 const DogPreview = (props) => {
@@ -10,7 +11,8 @@ const DogPreview = (props) => {
   let btnName = expanded ? "LESS" : "MORE"
 
   const handleImageError = () => {
-    setImgSrc('../assets/placeholder.svg');
+    // setImgSrc('../public/placeholder.svg');
+    setImgSrc(placeholder)
   }
 
   const setIsPresentSymbols = () => {
