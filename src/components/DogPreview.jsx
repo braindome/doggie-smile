@@ -10,7 +10,7 @@ const DogPreview = (props) => {
   let btnName = expanded ? "LESS" : "MORE"
 
   const handleImageError = () => {
-    setImgSrc('./public/placeholder.svg');
+    setImgSrc('../assets/placeholder.svg');
   }
 
   const setIsPresentSymbols = () => {
