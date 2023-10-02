@@ -9,6 +9,8 @@ const dogApiUrl = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
 const Catalogue = (props) => {
   const [dogList, setDogList] = useState([]);
   const [searchInput, setSearchInput] = useState("")
+  const [selectedDog, setSelectedDog] = useState(null);
+  const [dogCardVisible, setDogCardVisible] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,6 +62,7 @@ const Catalogue = (props) => {
             present={dog.present}
             age={dog.age}
             owner={dog.owner}
+            chipNumber={dog.chipNumber}
             onClick={() => handleDogPreviewClick(dog)}
           />
         ))}
