@@ -24,7 +24,7 @@ const Catalogue = (props) => {
     fetchData();
   }, []);
 
-  const handleSearch = async () => {
+  const handleSearch = () => {
     try {
       const filteredDogs = dogList.filter((dog) =>
         dog.name.toLowerCase().includes(searchInput.toLowerCase())
@@ -44,15 +44,11 @@ const Catalogue = (props) => {
 
   return (
     <div className="catalogue-container">
-      <h1>Catalogue</h1>
-      {/* <Header 
+      <Header 
         searchInput={searchInput}
         onSearchInputChange={setSearchInput}
         onSearch={handleSearch}
-      /> */}
-      <Link to="/">
-        <button>Home</button>
-      </Link>
+      />
       <div className="dog-grid">
         {dogList.map((dog, index) => (
           <DogPreview

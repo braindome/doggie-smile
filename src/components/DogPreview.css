@@ -2,7 +2,7 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 @-webkit-keyframes dog-preview {
@@ -18,7 +18,7 @@
 .dog-card {
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid black;
+  border: 3px solid black;
 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .dog-card:hover, .dog-card:active {
-  border: 1px solid #2098D1;
+  border: 3px solid #2098D1;
 }
 
 .data {
@@ -44,20 +44,17 @@
 }
 
 .dog-preview {
+
     display: flex;
     padding: 1rem;
-    /* border-radius: 10px; */
-    padding: 15px;
     display: inline-block;
     vertical-align: middle;
-    /* -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    overflow: hidden;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-property: color, background-color;
-    transition-property: color, background-color; */
+}
+
+@media (min-width: 350px) {
+  .dog-preview {
+    width: 100%;
+  }
 }
 
 @media (min-width: 576px) {
@@ -69,6 +66,14 @@
 @media (min-width: 992px) {
   .dog-preview {
     width: 33.3333%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .dog-preview {
+    width: 25%;
+    flex: 1 0 calc(25% - 10px);
+
   }
 }
 
