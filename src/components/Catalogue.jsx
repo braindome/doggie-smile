@@ -49,8 +49,7 @@ const Catalogue = (props) => {
       <Header 
         searchInput={searchInput}
         onSearchInputChange={setSearchInput}
-        onSearch={handleSearch}
-      />
+        onSearch={handleSearch}      />
       <div className="dog-grid">
         {dogList.map((dog, index) => (
           <DogPreview

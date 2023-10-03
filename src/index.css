@@ -47,8 +47,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+button img {
+  filter: invert(1) grayscale(100%) brightness(80%);
+}
+
 button:hover {
-  border-color: #646cff;
+  border-color: #2098D1;
 }
 button:focus,
 button:focus-visible {

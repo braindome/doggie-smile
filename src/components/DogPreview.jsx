@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./DogPreview.css";
-import "./DogCard";
 import placeholder from "../assets/placeholder.svg" 
-import DogCard from "./DogCard";
 
 const DogPreview = (props) => {
 
