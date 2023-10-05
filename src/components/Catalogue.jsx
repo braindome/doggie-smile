@@ -4,7 +4,7 @@ import "./Catalogue.css";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 
-const dogApiUrl = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
+const dogApiUrl = "https://api.jsonbin.io/v3/b/651af2c354105e766fbcbd12";
 
 const Catalogue = (props) => {
   const [dogList, setDogList] = useState([]);
