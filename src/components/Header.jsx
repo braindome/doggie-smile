@@ -14,9 +14,12 @@ const Header = ({ searchInput, onSearchInputChange, onSearch }) => {
     <div className="header">
       <div className="left-section">
         <Link to="/">
-          <button>
+          <button className="header_button">
             <img src={home_icon} alt="Home" />
           </button>
+          {/* <span className="header_button">
+            <img src={home_icon} alt="Home" className="svg_icon"/>
+          </span> */}
         </Link>
       </div>
       <h1>Catalogue</h1>
@@ -28,9 +31,12 @@ const Header = ({ searchInput, onSearchInputChange, onSearch }) => {
           onSearch={handleKeyPress}
           placeholder="Search for string..."
         />
-        <button onClick={onSearch}>
+        <button className="header_button" onClick={onSearch}>
           <img src={search_icon} alt="" />
         </button>
+        {/* <span className="header_button" onClick={onSearch} >
+          <img src={search_icon} alt="" className="svg_icon" />
+        </span> */}
       </div>
     </div>
   );

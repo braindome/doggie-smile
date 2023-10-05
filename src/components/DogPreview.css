@@ -2,9 +2,10 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 30%;
+    border-radius: 20px;
+    border: solid 2px #001F3F;
 }
-
+/* 
 @-webkit-keyframes dog-preview {
     50% {
       background-color: rgba(32, 152, 209, 0.75);
@@ -14,11 +15,11 @@
     50% {
       background-color: rgba(32, 152, 209, 0.75);
     }
-}
+} */
 .dog-card {
   border-radius: 20px;
   overflow: hidden;
-  border: 3px solid black;
+  border: 3px solid #001F3F;
 
 }
 
@@ -27,7 +28,7 @@
 }
 
 .dog-card:hover, .dog-card:active {
-  border: 3px solid #2098D1;
+  border: 3px solid #22668D;
 }
 
 .data {
@@ -44,16 +45,19 @@
 }
 
 .dog-preview {
-
+    margin: 5px;
+    border: solid #22668D 2px;
+    border-radius: 20px;
+    background-color: #8ECDDD;
     display: flex;
-    padding: 1rem;
+    padding: 0.5rem;
     display: inline-block;
     vertical-align: middle;
 }
 
 @media (min-width: 350px) {
   .dog-preview {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -106,6 +110,6 @@
     animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    background-color: #2098D1;
+    background-color: #22668D;
     color: white;
 }

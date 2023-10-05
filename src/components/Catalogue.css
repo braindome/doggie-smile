@@ -7,24 +7,19 @@
 #root {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
     text-align: center;
 }
-
-/* html {
-
-    background-color: #ecf9ff;
-} */
-
   
 body {
     font-family: 'Iosevka', serif;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0;
-    padding: 1rem;
+    /* padding: 1rem; */
     /* max-width: 800px; */
     margin: 0 auto;
+    color: #001F3F;
 }
 
 img {
@@ -44,15 +39,47 @@ button img {
     height: 100%;
 }
 
+.header_button {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.header_button img {
+    width: 20px;
+    height: 20px;
+}
+
+.header_button .svg_icon {
+    fill: #8ECDDD;
+    transition: fill 0.3s ease;
+}
+
+.header_button:hover .svg_icon {
+    fill: #001F3F;
+}
+
 .header {
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
     align-items: center;
-    border: solid 2px rgba(32, 152, 209, 0.75);
+    border: solid 2px #22668D;
     border-radius: 20px;
+    background-color: #8ECDDD;
+}
+
+.header input {
+    height: 2rem;
 }
 
 .left-section, .right-section {
@@ -60,9 +87,6 @@ button img {
     align-items: center;
 }
 
-.header input, button {
-    height: 3em;
-}
 
 
 @media (min-width: 350px) {
@@ -76,7 +100,7 @@ button img {
         font-size: 1.2rem;
     }
 
-    .header button {
+    .header span {
         font-size: 0.8em;
     }
 }
@@ -92,7 +116,7 @@ button img {
         font-size: 1.5rem;
     }
 
-    .header button {
+    .header span {
         font-size: 1em;
     }
 }
@@ -108,7 +132,7 @@ button img {
         font-size: 1.8rem;
     }
 
-    .header button {
+    .header span {
         font-size: 1.2em;
     }
 }
@@ -125,13 +149,13 @@ button img {
         font-size: 2rem;
     }
 
-    .header button {
+    .header span {
         font-size: 1.5em;
     }
 }
-.catalogue-container {
+/* .catalogue-container {
     padding: 10px;
-}
+} */
 
 .dog-grid {
 
